@@ -27,12 +27,9 @@ html{
 body{
     font-size: 1.6rem;
     font-family: var(--font-primary);
+    background-color: var(--lvl5);
 }
 
-.container{
-    max-width: 144rem;
-    margin: 0 auto;
-}
 
 .main-header-container{
     width: 100%;
@@ -42,9 +39,14 @@ body{
     justify-content: center;
 }
 
+.main-header-container .container{
+    max-width: 144rem;
+    margin: 0 auto;
+}
+
 h1, h2, h3, h4, h5, h6{
     font-family: var(--font-headings);
-    color: var(--lvl4);
+    color: var(--lvl5);
 }
 
 .main-logo{
@@ -65,4 +67,68 @@ h1, h2, h3, h4, h5, h6{
     margin-left: 1rem;
     color: white;
     font-size: 3.6rem;
+}
+
+.container-search{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem;
+}
+
+.search-form{
+    max-width: 64rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--lvl5);
+    border: 2px solid #333;
+    border-radius: 0.5rem;
+    transition: all 200ms ease-in-out;
+}
+
+.search-button, .search-input, .search-button i{
+    background: none;
+}
+
+.search-input{
+    width: 64rem;
+    height: 3.5rem;
+    max-width: 64rem;
+    border-radius: 1rem;
+    outline: none;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: 0px;
+    transition: all 200ms ease-in-out;
+}
+
+.search-button{
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-right: 0.25rem;
+    border: 0px;
+    outline: none;
+    border-radius: 0.4rem;
+    transition: all 200ms ease-in-out;
+}
+.search-button i{
+    color: black;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.search-button:focus{
+    /* outline: 2px solid var(--lvl6); */
+    background: rgba(52,0,22,1);
+}
+
+.search-form:focus-within {
+    border: 2px solid var(--lvl6);
+    box-shadow: 1px 1px 3px 0.1rem black;
+    background: #fff;
+}
+.search-form:focus-within .search-button i{
+    color: var(--lvl6);
 }
