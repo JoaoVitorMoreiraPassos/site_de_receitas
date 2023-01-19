@@ -1,9 +1,7 @@
-from django.contrib import admin
-from django.http import HttpResponse
 from django.urls import path
-from receitas.views import home
+from receitas.views import index
 
 
 urlpatterns = [
-    path("", home)
+    path("", index)
 ]
