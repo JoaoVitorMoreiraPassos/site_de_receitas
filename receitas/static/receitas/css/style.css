@@ -30,7 +30,9 @@ body {
     font-family: var(--font-primary);
     background-color: var(--lvl5);
 }
-
+.main-container{
+    width: 100%;
+}
 .main-header-container {
     width: 100%;
     background-color: var(--lvl7);
@@ -40,7 +42,7 @@ body {
 }
 
 .container {
-    max-width: 144rem;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -304,11 +306,22 @@ h6 {
 
 
 
-@media screen and (max-width: 580px){
+@media screen and (max-width: 720px){
     .container-search{
-        width: 100%
+        width: 100%;
+    }
+    .container{
+        width: 100%;
     }
     .search-form{
-        width: 80%;
+        width: 100%;
+    }
+    .main-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .developer{
+        margin-bottom: 1rem;
     }
 }
