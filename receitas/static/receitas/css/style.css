@@ -280,7 +280,27 @@ h6 {
     margin-right: 0.5rem;
 }
 
+.main-footer {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--lvl7);
+    padding: 3rem;
+    color: var(--lvl5);
+}
 
+.main-footer a {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: all 300ms ease-in-out;
+}
+
+.main-footer a:hover {
+    filter: brightness(.8);
+}
 
 
 
