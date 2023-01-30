@@ -17,6 +17,10 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -38,6 +42,9 @@ body {
 .container {
     max-width: 144rem;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h1,
@@ -47,7 +54,6 @@ h4,
 h5,
 h6 {
     font-family: var(--font-headings);
-    color: var(--lvl5);
 }
 
 .main-logo {
@@ -86,7 +92,7 @@ h6 {
     background: var(--lvl5);
     border: 2px solid #333;
     border-radius: 0.5rem;
-    transition: all 200ms ease-in-out;
+    transition: all 300ms ease-in-out;
 }
 
 .search-button,
@@ -108,7 +114,7 @@ h6 {
     padding: 1rem;
     font-size: 1.6rem;
     border: 0px;
-    transition: all 200ms ease-in-out;
+    transition: all 300ms ease-in-out;
 }
 
 .search-button {
@@ -118,13 +124,13 @@ h6 {
     border: 0px;
     outline: none;
     border-radius: 0.4rem;
-    transition: all 200ms ease-in-out;
+    transition: all 300ms ease-in-out;
 }
 
 .search-button i {
     color: black;
     cursor: pointer;
-    transition: all 200ms ease-in-out;
+    transition: all 300ms ease-in-out;
 }
 
 .search-button:focus {
@@ -133,7 +139,6 @@ h6 {
 
 .search-form:focus-within {
     border: 2px solid var(--lvl3);
-    /* box-shadow: 0px 0px 0px 0.1rem black; */
     background: #fff;
 }
 
@@ -142,27 +147,24 @@ h6 {
 }
 
 .main-content {
-    width: 80%;
+    width: 89%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .recipe-list-item {
-    height: 50rem;
-    width: 33rem;
-    background: var(--lvl3);
+    min-height: 50rem;
+    height: auto;
+    width: 38rem;
+    background: none;
     margin: 0 1rem 6rem 1rem;
-    transition: all 200ms ease-in-out;
-    cursor: pointer;
+    transition: all 300ms ease-in-out;
     border-radius: 0.5rem;
     box-shadow: rgba(0, 0, 0, 0.9) -4px 9px 10px -6px;
-}
-
-.recipe-list-item h1 {
-    color: var(--lvl5);
+    position: relative;
 }
 
 .recipe-list-item:hover {
@@ -176,4 +178,72 @@ h6 {
     border-radius: 0.5rem 0.5rem 0 0;
     border: none;
     outline: none;
+}
+
+.recipe-text-infos{
+    padding: 3rem;
+    height: auto;
+}
+
+.recipe-title-container, .recipe-author, .recipe-description{
+    margin-bottom: 1.5rem
+}
+
+.recipe-author-item{
+    font-size: 1.0rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    color: gray;
+}
+
+.recipe-author-item a{
+    cursor: pointer;
+    color: rgb(7, 126, 223);
+    transition: all 300ms ease-in-out;  
+}
+
+.recipe-author-item a:hover{
+    color: var(--lvl1);
+}
+
+.recipe-description p{
+    text-align: justify;
+    font-size: 1.5rem;
+}
+
+.recipe-footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.recipe-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    background: var(--lvl7);
+    color: #fff;
+    border-radius: 0 0 0.5rem 0.5rem;
+    cursor: pointer;
+}
+
+
+
+
+
+@media screen and (max-width: 580px){
+    .container-search{
+        width: 100%
+    }
+    .search-form{
+        width: 80%;
+    }
 }
