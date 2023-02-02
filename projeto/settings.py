@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-8rsk7i5+r93(pjxxm+pfylm88jk=kh6k2x$yms_z&hu_8ex%ks
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["192.168.11.8", "127.0.0.1", "0.0.0.0"]
 
 
 # Application definition
@@ -57,7 +57,7 @@ TEMPLATES = [
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
             BASE_DIR / "bases/",
-            BASE_DIR / "font-awesome/"  
+            BASE_DIR / "font-awesome/"
         ],
         "APP_DIRS": True,
         "OPTIONS": {
