@@ -1,0 +1,22 @@
+{% include "receitas/partials/head.html" %}
+
+<html lang="en">
+
+<head>
+    {%include "receitas/partials/head.html"%}
+    <title>{% block title %} {% endblock title %}</title>   
+</head>
+
+<body>
+    <div class="main-container">
+        {% include "receitas/partials/header.html" %}
+        {% include "receitas/partials/search.html" %}
+        <main class="main-content-container">
+            {% block content %} {% endblock %}
+        </main>
+    </div>
+    {% include "receitas/partials/footer.html" %}
+
+</body>
+
+</html>
