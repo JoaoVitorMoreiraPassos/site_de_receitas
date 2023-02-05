@@ -6,13 +6,8 @@
 
 {%block content%}
     <div class="main-content main-content-list container">
-        {% include "receitas/partials/recipe.html"%}
-        {% include "receitas/partials/recipe.html"%}
-        {% include "receitas/partials/recipe.html"%}
-        {% include "receitas/partials/recipe.html"%}
-        {% include "receitas/partials/recipe.html"%}
-        {% include "receitas/partials/recipe.html"%}
-        {% include "receitas/partials/recipe.html"%}
-        {% include "receitas/partials/recipe.html"%}
+        {% for receita in receitas %}
+            {% include "receitas/partials/recipe.html"%}
+        {% endfor %}
     </div>
 {%endblock content%}
