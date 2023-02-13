@@ -1,7 +1,14 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 # Create your models here.
-class Receita():
+
+
+class Categoria(models.Model):
+    name = models.CharField(max_length=65)
+
+
+class Receita(models.Model):
     title = models.CharField(max_length=65)
     description = models.CharField(max_length=165)
     slug = models.SlugField()
@@ -11,8 +18,13 @@ class Receita():
     servings_time_unit = models.CharField(max_length=65)
     preparation_steps = models.TextField()
     preparation_steps_is_html = models.BooleanField()
-    created_at = models.DatetimeField(auto_now_add=True)
-    updated_at = models.DatetimeField(auto_now=True)
-    is_posted = models.BooleanField(defautl=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    is_posted = models.BooleanField(default=False)
     cover = models.ImageField(upload_to='receitas/covers/%Y/%m/%d/')
-    
+    category = models.ForeignKey(
+        Categoria, on_delete=models.CASCADE, null=True
+    )
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, null=True
+    )
