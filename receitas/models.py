@@ -7,6 +7,9 @@ from django.db import models
 class Categoria(models.Model):
     name = models.CharField(max_length=65)
 
+    def __str__(self):
+        return str(self.name)
+
 
 class Receita(models.Model):
     title = models.CharField(max_length=65)
@@ -28,3 +31,6 @@ class Receita(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, null=True
     )
+
+    def __str__(self):
+        return self.title
