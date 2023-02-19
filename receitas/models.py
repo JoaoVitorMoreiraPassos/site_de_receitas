@@ -26,7 +26,8 @@ class Receita(models.Model):
     is_posted = models.BooleanField(default=False)
     cover = models.ImageField(upload_to='receitas/covers/%Y/%m/%d/')
     category = models.ForeignKey(
-        Categoria, on_delete=models.CASCADE, null=True
+        Categoria, on_delete=models.CASCADE, null=True, blank=True,
+        default=None
     )
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, null=True

@@ -7,7 +7,9 @@ app_name = "receitas"
 
 
 def home(request):
-    receitas = Receita.objects.all().order_by("-id")
+    receitas = Receita.objects.all(
+        is_posted=True
+    ).order_by("-id")
     print("receitas: ", receitas)
     return render(request, "receitas/pages/home.html", context={
         "receitas": receitas
@@ -17,10 +19,11 @@ def home(request):
 
 def category(request, category_id):
     receitas = Receita.objects.filter(
-        category__id=category_id
+        category__id=category_id,
+        is_posted=True
     ).order_by("-id")
     print("receitas: ", receitas)
-    return render(request, "receitas/pages/home.html", context={
+    return render(request, "receitas/pages/category.html", context={
         "receitas": receitas
     }
     )
