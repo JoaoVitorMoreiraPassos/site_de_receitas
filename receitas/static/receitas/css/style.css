@@ -17,7 +17,7 @@
     box-sizing: border-box;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -30,7 +30,8 @@ body {
     font-family: var(--font-primary);
     background-color: var(--lvl5);
 }
-.main-container{
+
+.main-container {
     width: 100%;
     height: fit-content;
     display: flex;
@@ -38,6 +39,7 @@ body {
     align-items: center;
     justify-content: space-between
 }
+
 .main-header-container {
     width: 100%;
     height: fit-content;
@@ -160,24 +162,30 @@ h6 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
 }
-.main-content-container{
+
+.main-content-container {
+    height: fit-content;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.main-content-detail {
     height: fit-content;
 }
-.main-content-detail{
-    height: fit-content;
-}
-.main-content-detail .recipe-list-item{
+
+.main-content-detail .recipe-list-item {
     width: 84rem;
     height: fit-content;
 }
-.main-content-detail .recipe-list-item:hover{
+
+.main-content-detail .recipe-list-item:hover {
     box-shadow: rgba(0, 0, 0, 0.9) -4px 9px 10px -6px;
     transform: scale(1);
 }
 
-.main-content-detail .recipe-list-item .recipe-cover img{
+.main-content-detail .recipe-list-item .recipe-cover img {
     height: 25rem;
 }
 
@@ -208,44 +216,49 @@ h6 {
     outline: none;
 }
 
-.recipe-text-infos{
+.recipe-text-infos {
     padding: 3rem;
     height: auto;
 }
 
-.recipe-title-container, .recipe-author, .recipe-description{
+.recipe-title-container,
+.recipe-author,
+.recipe-description {
     margin-bottom: 1.5rem
 }
 
-.recipe-author{
+.recipe-author {
     height: 3rem;
 }
-.recipe-author-item{
+
+.recipe-author-item {
     font-size: 1.0rem;
     margin-bottom: 0.5rem;
     margin-right: 0.5rem;
     color: gray;
 }
 
-.recipe-author-item a{
+.recipe-author-item a {
     cursor: pointer;
     color: rgb(7, 126, 223);
-    transition: all 300ms ease-in-out;  
+    transition: all 300ms ease-in-out;
 }
 
-.recipe-author-item a:hover{
+.recipe-author-item a:hover {
     color: var(--lvl1);
 }
 
-.recipe-description p{
+.recipe-description p {
     text-align: justify;
     font-size: 1.5rem;
 }
-.meta-footer{
+
+.meta-footer {
     width: 100%;
     height: fit-content;
 }
-.recipe-meta-container{
+
+.recipe-meta-container {
     justify-self: flex-end;
     display: flex;
     flex-flow: row;
@@ -255,31 +268,33 @@ h6 {
     width: 100%;
     padding: 1rem;
     background: var(--lvl4);
-    
 }
+
 .recipe-meta {
     display: flex;
     align-items: center;
     flex-flow: column nowrap;
 }
-.recipe-meta-title{
+
+.recipe-meta-title {
     font-size: 1.6rem;
 }
-.recipe-meta-text{
+
+.recipe-meta-text {
     font-size: 1.4rem;
 }
 
-.recipe-footer-container{
+.recipe-footer-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    border-radius: 0rem 0  0.5rem 0.5rem;
+    border-radius: 0rem 0 0.5rem 0.5rem;
     background: var(--lvl7);
 }
 
-.recipe-footer{
+.recipe-footer {
     justify-self: flex-end;
     display: flex;
     flex-direction: row;
@@ -295,7 +310,7 @@ h6 {
     outline: none;
 }
 
-.recipe-footer a{
+.recipe-footer a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -307,11 +322,11 @@ h6 {
     transition: all 300ms ease-in-out;
 }
 
-.recipe-footer a i{
+.recipe-footer a i {
     margin-right: 0.5rem;
 }
 
-.preparation-steps{
+.preparation-steps {
     text-align: justify;
     padding: 3rem;
 }
@@ -338,24 +353,22 @@ h6 {
     filter: brightness(.8);
 }
 
-
-
-@media screen and (max-width: 720px){
-    .container-search{
+@media screen and (max-width: 720px) {
+    .container-search {
         width: 100%;
     }
-    .container{
+    .container {
         width: 100%;
     }
-    .search-form{
+    .search-form {
         width: 100%;
     }
-    .main-footer{
+    .main-footer {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
     }
-    .developer{
+    .developer {
         margin-bottom: 1rem;
     }
 }
