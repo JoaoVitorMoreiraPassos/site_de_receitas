@@ -9,12 +9,16 @@
         <div class="recipe-author">
             <span class="recipe-author-item">
                 <i class="fas fa-user"></i>
-                {% if receita.author.first_name %}
-                {{ receita.author.first_name }}
+                {% if receita.author is not None %}
+                    {% if receita.author.first_name %}
+                        {{ receita.author.first_name }}
+                    {% else %}
+                        {{ receita.author.username }}
+                    {% endif %}
                 {% else %}
-                {{ receita.author.username }}
+                    Desconhecido
                 {% endif %}
-            </span>
+                </span>
             <span class="recipe-author-item">
                 <i class="fas fa-calendar-alt"></i>
                 {{ receita.created_at|date:"d/m/Y" }} às {{ receita.created_at|date:"H:i:s" }}
@@ -50,7 +54,7 @@
         {% if not is_detail_page %}
         <div class="recipe-footer-container">
             <button class="recipe-footer">
-                    <a href="">
+                    <a href={% url 'receitas:receitas' receita.id %}>
                         <i class="fas fa-eye"></i>Ver mais
                     </a>
                 </button>
@@ -60,7 +64,11 @@
 
     {% if is_detail_page%}
     <div class="preparation-steps">
-        {{ receita.preparation_steps| linebreaksbr }}
+        {% if receita.preparation_steps_is_html is True %}
+            {{ receita.preparation_steps| safe }}
+        {% else %}
+            {{ receita.preparation_steps| linebreaksbr }}
+        {% endif %}
     </div>
     {% endif %}
 </div>
